@@ -1,0 +1,22 @@
+#define ACCOUNT_H
+#include<iostream>
+#include<cmath>
+class SavingsAccount {
+private:
+	int id;
+	double balance;
+	double rate;
+	int lastDate;
+	double accumulation;
+public:
+	void record(int date, double amount);
+	double accumulate(int date);
+	SavingsAccount(int date, int id, double rate);
+	int getId() const;
+	double getBalance() const;
+	double getRate() const;
+	void show();
+	void deposit(int date, double amount);
+	void withdraw(int date, double amount);
+	void settle(int date);
+};
